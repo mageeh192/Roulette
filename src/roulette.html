@@ -4,10 +4,40 @@
     <meta charset="utf-8">
     <title>Roulette Wheel</title>
 </head>
+
+<style>
+    div.chatbox{
+    border: 2px solid rgb(0, 177, 32);
+    width: 300px;
+    height: 100px;
+    margin-bottom: 12pt;
+    overflow-y: scroll;
+    }
+ 
+    div.rouge{
+    background: red;
+    border: 2px dotted black;
+    color: black;
+    }
+    div.noir {
+        background: black;
+        border: 2px dotted red;
+        color: red;
+    }
+
+</style>
+
+
 <body>
-    You played the roulette wheel!    
+    Lets spin the roulette wheel!    
     <hr>
-    <div>Check the console log for your result!</div>
+
+    <div class="chatbox" id="chatbox">    </div>
+
+    <button onClick = "spin()">
+        Spin to win!
+    </button>
 
 <script src="/static/myscript.js"></script>
+
 </body></html>

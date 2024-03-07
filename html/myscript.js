@@ -10,6 +10,8 @@ let color;
 let evenness;
 let passing;
 
+let result;
+
 function spin(){
 
     //Get a random number and see what all its connected to.
@@ -45,16 +47,15 @@ function spin(){
     }
 
     //Put it in the chatbox!
-    let txt = [rouletteNum[index], color, eveness, passing];
-    console.log("spinny spin spin: ",txt);
-    let n = document.createTextNode(txt);
+    result = [rouletteNum[index], color, eveness, passing];
+    console.log("spinny spin spin: ",result);
+    let n = document.createTextNode(result);
     let messagediv = document.createElement("div");
     if( color == "Rouge" )
         messagediv.className = "rouge";
     if (color == "Noir")
         messagediv.className = "noir";
     messagediv.appendChild(n);
-    let box = document.getElementById("chatbox");
-    box.appendChild(messagediv);
-    box.scrollTop = 9999999;
+    sendIt();
+
 }
